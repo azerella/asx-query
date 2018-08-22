@@ -17,10 +17,8 @@
 
 # Compile
 ```bash
-make configure
-
 # Prefix example for building to /usr/local/bin
-./configure --prefix=/usr/local
+make configure --prefix=/usr/local
 
 # To compile with all CPU cores
 make -j $(nproc --all) all
