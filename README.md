@@ -10,27 +10,24 @@
 
 # Prerequisites
 
-- [curl >= 7.5.0](https://curl.haxx.se/download.html) - To compile dynamically.
-- [gcc >= 7.1.0](https://gcc.gnu.org/)
-- [make >= 3.9](https://www.gnu.org/software/make/)
+- [curl](https://curl.haxx.se/download.html) - To compile dynamically.
+- [build-essential](https://gcc.gnu.org/) - Toolchain to build programs (g++, make etc)
+> NOTE: **MacOS** run: `xcode-select --install` for build-essential equivalent.
 
 
 # Compile
 ```bash
-# Prefix example for building to /usr/local/bin
-make configure --prefix=/usr/local
-
 # To compile with all CPU cores
-make -j $(nproc --all) all
-
-make install
+make -j $(sysctl -n hw.ncpu) all
 ```
 
 # Start
 ```bash
-$ asxquery
+$ ./bin/asxquery
+```
 
-# Example usage
+### Example usage:
+```
 ASX code to query: CBA
 77.39
 77.40

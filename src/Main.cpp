@@ -1,15 +1,9 @@
-//	**************************
-//	Author: Adam A. Zerella
-//	Created: 14/10/2017
-//	Contact: adam.zerella@gmail.com
-//	**************************
-
 #include <iostream>
 #include <regex>
 #include <string>
 
 #include "Market.h"
-#include "curl\curl.h"
+#include "curl/curl.h"
 
 #define exprLeft "^.+<span class=\"pr\">.+?>"
 #define exprRight "<.+"
@@ -54,11 +48,13 @@ static float performQuery() {
 
 	//Remove new line from webpage source
 	curl_output.erase(std::remove(curl_output.begin(), curl_output.end(), '\n'), curl_output.end());
+	
 	//Perform regex trimming
 	std::regex trimLeftSide(exprLeft, std::regex_constants::optimize);
 	std::regex trimRightSide(exprRight, std::regex_constants::optimize);
 	std::string result = std::regex_replace(curl_output, trimLeftSide, "") +
 		std::regex_replace(curl_output, trimRightSide, "");
+
 	//Cast to float
 	return std::stof(result);
 }

@@ -1,9 +1,3 @@
-//	**************************
-//	Author: Adam A. Zerella
-//	Created: 14/10/2017
-//	Contact: adam.zerella@gmail.com
-//	**************************
-
 #include "Market.h"
 
 namespace QueryASX = adamzerella::QueryASX;
