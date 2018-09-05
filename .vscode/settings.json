@@ -2,4 +2,7 @@
     "editor.renderWhitespace": "all",
 	"editor.rulers": [80],
 	"editor.tabSize": 4,
+	"files.associations": {
+		"string": "cpp"
+	},
 }
