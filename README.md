@@ -10,7 +10,7 @@
 
 # Prerequisites
 
-- [curl](https://curl.haxx.se/download.html) - To compile dynamically.
+- [curl](https://curl.haxx.se/download.html) - Used for the GET query
 - [build-essential](https://gcc.gnu.org/) - Toolchain to build programs (g++, make etc)
 > NOTE: **MacOS** run: `xcode-select --install` for build-essential equivalent.
 
